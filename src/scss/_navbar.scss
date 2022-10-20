@@ -1,0 +1,150 @@
+nav {
+    width: 70%;
+    background-color: #fff;
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem 15%;
+    border-bottom: 1px solid var(--light-gray-blue);
+    .left-container {
+        display: flex;
+        align-items: center;
+        gap: 20%;
+        .links-container {
+            display: flex;
+            align-items: center;
+            gap: 10%;
+            color: var(--gray-blue);
+            font-weight: 500;
+            font-size: 1.1rem;
+            p {
+                cursor: pointer;
+            }
+        }
+        .brand-container {
+            img {
+                cursor: pointer;
+            }
+            .hamburger-container {
+                display: none;
+            }
+        }
+    }
+    .right-container {
+        user-select: none;
+        z-index: 10000;
+        display: flex;
+        align-items: center;
+        gap: 60%;
+        .img-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            &.avatar {
+                height: 1rem;
+            }
+            &.cart {
+                border: none;
+                background-color: transparent;
+                position: relative;
+                .notification-container {
+                    position: absolute;
+                    width: 0.4rem;
+                    height: 0.4rem;
+                    right: -0.5rem;
+                    top: -0.3rem;
+                    background-color: var(--primary-clr);
+                    border-radius: 9999rem;
+                    opacity: 0;
+                    transition: 0.3s;
+                    &.active {
+                        opacity: 1;
+                    }
+                }
+            }
+            .avatar-img {
+                height: 3rem;
+                cursor: pointer;
+            }
+            .cart-img {
+                cursor: pointer;
+            }
+        }
+    }
+    @media only screen and (max-device-width: 1084px) {
+        padding: 2rem 3rem;
+        width: 92%;
+        .right-container {
+            gap: 2rem;
+        }
+    }
+    @media only screen and (max-device-width: 1024px) {
+        padding: 2rem 3rem;
+        width: 90%;
+        .left-container {
+            gap: 3rem;
+            .brand-container {
+                img {
+                    cursor: pointer;
+                    height: 1rem;
+                }
+            }
+            .links-container {
+                gap: 1rem;
+                font-size: 1rem;
+            }
+        }
+    }
+    @media only screen and (max-device-width: 800px) {
+        padding: 2rem 1rem;
+        width: 95.7%;
+        position: -webkit-sticky;
+        position: sticky;
+        top: 0;
+        .left-container {
+            .links-container {
+                display: none;
+            }
+            .brand-container {
+                display: flex;
+                flex-direction: row-reverse;
+                gap: 1.25rem;
+                height: 100%;
+                .hamburger-container {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    width: 1.8rem;
+                    height: 100%;
+                    background: transparent;
+                    .hamburger-bar {
+                        width: 1.8rem;
+                        height: 0.25rem;
+                        background-color: black;
+                        border-radius: 9999rem;
+                    }
+                }
+            }
+        }
+    }
+    @media only screen and (max-device-width: 500px) {
+        .right-container {
+            .img-container {
+                &.cart {
+                    position: static;
+                }
+            }
+        }
+    }
+    @media only screen and (max-device-width: 450px) {
+        padding: 2rem 0rem;
+        width: 100%;
+        .brand-container {
+            padding: 0 0.25rem;
+        }
+        .right-container {
+            gap: 1rem;
+            padding: 0 0.75rem;
+        }
+    }
+}

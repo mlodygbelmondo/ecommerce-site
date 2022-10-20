@@ -1,0 +1,55 @@
+.mobile-sidebar {
+    display: block;
+    position: fixed;
+    top: -100vh;
+    left: -100vw;
+    height: 100vh;
+    width: 100vw;
+    &.active {
+        top: 0;
+        left: 0;
+    }
+    .black-container {
+        position: fixed;
+        top: 0;
+        left: -100vw;
+        height: 100vh;
+        width: 100vw;
+        background-color: black;
+        opacity: 0.5;
+
+        &.active {
+            left: 0;
+        }
+    }
+    .sidebar {
+        padding: 5vw;
+        position: fixed;
+        top: 0;
+        left: -60vw;
+        z-index: 9999;
+        background-color: #fff;
+        height: 100vh;
+        width: 50vw;
+        display: flex;
+        flex-direction: column;
+        transition: 0.5s;
+        gap: 3rem;
+        &.active {
+            left: 0;
+        }
+        .links-list {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            p {
+                color: #000;
+                font-weight: 700;
+                font-size: 1.1rem;
+                p {
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}

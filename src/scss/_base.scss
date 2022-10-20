@@ -1,0 +1,27 @@
+:root {
+    --primary-clr: hsl(26, 100%, 55%);
+    --primary-clr-light: hsl(25, 100%, 94%);
+
+    --dark-blue: hsl(220, 13%, 13%);
+    --gray-blue: hsl(219, 9%, 45%);
+    --light-gray-blue: hsl(220, 14%, 75%);
+    --light-gray: hsl(216, 20%, 95%);
+
+    --paragraph-fs: 1rem;
+    --primary-ff: 'Kumbh Sans', sans-serif;
+}
+
+* {
+    box-shadow: none;
+    margin: 0;
+    padding: 0;
+    font-family: var(--primary-ff);
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
